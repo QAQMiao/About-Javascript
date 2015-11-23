@@ -37,7 +37,7 @@
   	|compare|DOM|jQuery|
 	|:---:|:---:|:---:|
 	|-|网页所有内容加载完毕后执行<br />window.onload() = function(){...};|DOM结构绘制完毕后执行<br />$(document).ready(function(){...});<br />or briefly<br />$(function(){...});|
-	||document.getElementById("cc").innerHTML|$("#cc").html()|
-	||document.getElementById("cc").checked|$("cc").attr("checked")|
+	|-|document.getElementById("cc").innerHTML|$("#cc").html()|
+	|-|document.getElementById("cc").checked|$("cc").attr("checked")|
 	|获得对象类型|DOM对象|jQuery对象|
 	|互相转换|var cr = document.getElementById("cr");<br />var $cr = $(cr)<br />alert($cr.attr("checked"));|var $cr = $("#cr");<br />var cr = $cr[0];<br />or<br />var cr = $cr.get(0);<br />alert(cr.checked);|
