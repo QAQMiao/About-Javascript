@@ -26,6 +26,16 @@
       <h2 id = "cc">My Beautiful girl</h2>
       js: var c = getElementById("cc");
           c.innerHTML = “the text which we like”;
+```
 
+- **About JQuery**
 
+  1.rules
+  	- $("#foo") is the same as jQuery("#foo")
+  	- compare with DOM
 
+  	|DOM|jQuery|
+	|:---:|:---:|
+	|window.onload() = function(){...};|$(document).ready(function(){...});<br />or briefly<br />$(function(){...});|
+	|document.getElementById("cc").innerHTML|$("#cc").html()|
+	|document.getElementById("cc").checked|$("cc").attr("checked")|
