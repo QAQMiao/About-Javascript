@@ -15,6 +15,7 @@
 	    - _self：在当前窗口显示目标网页
 	    - _top：框架网页中在上部窗口中显示目标网页
     - para2:
+    - ![github](./1.jpg) 
   5.	
   ```html
       var a = window.open(…);
