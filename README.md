@@ -15,12 +15,13 @@
 	    - _self：在当前窗口显示目标网页
 	    - _top：框架网页中在上部窗口中显示目标网页
     - para2:
-    - ![github](./1.jpg) 
-  5.	
-  ```html
-      var a = window.open(…);
-      a.close(); // close the window
-  ```
+    - ![github](./1.jpg)	
+  5.	eg:
+
+  	```html
+	var a = window.open(…);
+	a.close(); // close the window
+  	```
   6.	
   ```html
       <h2 id = "cc">My Beautiful girl</h2>
@@ -41,6 +42,7 @@
 	|-|document.getElementById("cc").checked|$("cc").attr("checked")|
 	|获得对象类型|DOM对象|jQuery对象|
 	|互相转换|var cr = document.getElementById("cr");<br />var $cr = $(cr)<br />alert($cr.attr("checked"));|var $cr = $("#cr");<br />var cr = $cr[0];<br />or<br />var cr = $cr.get(0);<br />alert(cr.checked);|
+	
   2.**Resolve conflicts**
   	
   	*jQuery几乎所有插件都被限制在命名空间内，通常全局对象都被存储在jQuery命名空间内，默认情况下，jQuery用$作为自身快捷键，所以当其他框架需要$控制权时，需要给出如下命令*
