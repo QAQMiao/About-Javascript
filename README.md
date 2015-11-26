@@ -57,32 +57,32 @@
   			})
   		})
   		```
-  		- 或者 by "var $j = jQuery.noConflict();" 自定义快捷方式来操作jQuery对象 //感觉这个不错吖么么哒
+  		- 或者 by "var $j = jQuery.noConflict();" 自定义快捷方式来操作jQuery对象&emsp;&emsp;&emsp;&nbsp;//*感觉这个不错吖么么哒*
   	- 先导入jQuery
-  		- 直接用jQuery来工作就好了，不用"jQuery.onConflict()"来让出控制权 //我的理解是后导入的框架覆盖了$的控制权，所以$的控制权本来就在人家身上，不用你让出来，你乖乖的用你自己的名字就好了，嗯【认真脸】 
+  		- 直接用jQuery来工作就好了，不用"jQuery.onConflict()"来让出控制权&emsp;&emsp;&emsp;&emsp;&emsp;//*我的理解是后导入的框架覆盖了$的控制权，所以$的控制权本来就在人家身上，不用你让出来，你乖乖的用你自己的名字就好了，嗯【认真脸】*
   	
   3.**About Selector**
 	
 	总的来说，给我感觉和css选择器规则相差不大，所以大致写一下加强记忆好了。至于优点，就是和之前js的getElementById相比更加简短了，还有就是容错率高了0.0。
 	- 基本选择器
-		- $("#test") 		//选择id为test的元素
-		- $(".test") 		//选择class为test的元素 
-		- $("p") 		//选择所有的p元素
+		- $("#test")&emsp;&emsp;&emsp;&emsp;//*选择id为test的元素*
+		- $(".test")&emsp;&emsp;&emsp;&emsp;&nbsp;//*选择class为test的元素* 
+		- $("p")&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;//*选择所有的p元素*
 		- e.g. $(".test").css("background","#0fccefc"); $("#test,div,.cc").css("background","#cca343");
 	- 层次选择器
-		- $("body p") 		//选择body中的所有p元素
-		- $("body > p") 	//选择body中的所有p儿子元素[不包括孙子元素哦]
-		- $("#cc + div")	//选择id为cc的元素的下一个div兄弟元素
+		- $("body p")&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;//*选择body中的所有p元素*
+		- $("body > p")&emsp;&emsp;&emsp;&emsp;//*选择body中的所有p儿子元素[不包括孙子元素哦]*
+		- $("#cc + div")&emsp;&emsp;&emsp;&emsp;//*选择id为cc的元素的下一个div兄弟元素*
 			- 要是紧邻着的兄弟哦
 			- e.g. [忘记写分号不要太在意- - ][明明只有你自己在意吧喂]
 			
-			![github][2.png]
-			![github][3.png]
-		- $("#cc ~ div")	//选择id为cc的元素后面所有的div兄弟们
+			![github](2.png)
+			![github](3.png)
+		- $("#cc ~ div")&emsp;&emsp;&emsp;//*选择id为cc的元素后面所有的div兄弟们*
 		- by the way,后两种，在jQuery中有更好的写法
 			- $(".one + div") == $(".one").next("div")
-			- $(".one ~ div") == $(".one").nextAll("div") 	//个人感觉后一种写法更加方便记忆
-			- $(".one").sibling("div")//选择class为one的元素所有同辈的div元素，前面的也会被选上哦
+			- $(".one ~ div") == $(".one").nextAll("div")&emsp;&emsp;&emsp;//*个人感觉后一种写法更加方便记忆*
+			- $(".one").sibling("div")&emsp;&emsp;&emsp;//*选择class为one的元素所有同辈的div元素，前面的也会被选上哦*
 	- 过滤选择器
 		- 基本过滤选择器[啊啊啊，不想敲了。。明天再敲或者干脆找个图片贴上怎么样0.0，嗯，今天就这样吧]
 		- 
