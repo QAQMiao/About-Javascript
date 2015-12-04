@@ -82,7 +82,7 @@
 		- by the way,后两种，在jQuery中有更好的写法
 			- $(".one + div") == $(".one").next("div")
 			- $(".one ~ div") == $(".one").nextAll("div")&emsp;&emsp;&emsp;//*个人感觉后一种写法更加方便记忆*
-			- $(".one").sibling("div")&emsp;&emsp;&emsp;//*选择class为one的元素所有同辈的div元素，前面的也会被选上哦*
+			- $(".one").sibling("div")&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;//*选择class为one的元素所有同辈的div元素，前面的也会被选上哦*
 	- 过滤选择器
 		- 基本过滤选择器[啊啊啊，不想敲了。。明天再敲或者干脆找个图片贴上怎么样0.0，嗯，今天就这样吧]
 		- 不好意思。。弃坑了几天，刚刚分手情绪不够稳定，不过现在可以继续学习辣。虽然现在除了我没人看，但是觉得还是要解释一下的好呢。
@@ -98,5 +98,6 @@
 		```html
 		$("p:contains('我')").css("background","#bbccaa");	//选择内容包含“我”的p元素，改变其背景色
 		$("p:contains(我)").css("background","#bbccaa");	//发现参数的参数可以写单引号也可以不写，总觉得写上好一点，毕竟XHTML
-		$("p:eq(3)").css("background","#bbccaa");		//选择索引值为3的p元素，这时又不能写引号了，我理解是写了引号就会变成字符型，取的值就是3的ASCII码值了，达不到想要的效果了
+		$("p:eq(3)").css("background","#bbccaa");		   //选择索引值为3的p元素，这时又不能写引号了，我理解是写了引号就会变成字符型，取的值就是3的ASCII码值了，达不到想要的效果了
+		```
 	- 
