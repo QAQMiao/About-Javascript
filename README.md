@@ -102,4 +102,7 @@
 		```
 		- var $a = $(...);$a.length表示此时$a中得到的jquery对象个数
 		- 在使用jquery选择器时不要随意加空格，很可能造成语义错误。e.g. $("p:hidden")和$("p :hidden")，前者是过滤选择器而后者是子代选择器。notice！
+		- make a distinction between :find() and :filter()
+			- $("div"):find("#cc")&nbsp;&nbsp;选择div子元素中id为cc的元素，等同于$("div #cc");
+			- $("div"):filter("#cc")&nbsp;&nbsp;选择id为cc的div元素们
 	- 
