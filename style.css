@@ -27,7 +27,7 @@ body{
 #main{
     width: 100%;
     height: 760px;
-    background: #546573;
+    background: url("block.png");#546573;
 }
 #bottom{
     height: 280px;
