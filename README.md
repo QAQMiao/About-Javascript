@@ -100,4 +100,6 @@
 		$("p:contains(我)").css("background","#bbccaa");	//发现参数的参数可以写单引号也可以不写，总觉得写上好一点，毕竟XHTML
 		$("p:eq(3)").css("background","#bbccaa");		   //选择索引值为3的p元素，这时又不能写引号了，我理解是写了引号就会变成字符型，取的值就是3的ASCII码值了，达不到想要的效果了
 		```
+		- var $a = $(...);$a.length表示此时$a中得到的jquery对象个数
+		- 在使用jquery选择器时不要随意加空格，很可能造成语义错误。e.g. $("p:hidden")和$("p :hidden")，前者是过滤选择器而后者是子代选择器。notice！
 	- 
