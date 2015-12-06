@@ -36,11 +36,11 @@ body{
 #box1{
     border:1px solid #27302f;
     width:16.4%;
-    height: 192px;
+    height: 200px;
     position:absolute;
     top:50%;
     margin-left: -25px;
-    margin-top:-96px;
+    margin-top:-100px;
     background:-moz-radial-gradient(left,#303636,#171b1c);/*火狐*/
     background:-webkit-gradient(radial, 0% 0%, 0% 100%,from(#303636), to(#171b1c));/*谷歌*/
     background: -webkit-gradient(radial, 0% 0%, 0% 100%, from(#303636), to(#171b1c));      /* Safari 4-5, Chrome 1-9*/
@@ -50,12 +50,12 @@ body{
 #box2{
     border:1px solid #27302f;
     width:16.4%;
-    height: 192px;
+    height: 200px;
     position:relative;
     top:50%;
     float: right;
     margin-right: -25px;
-    margin-top:-96px;
+    margin-top:-100px;
     background:-moz-radial-gradient(right,#303636,#171b1c);/*火狐*/
     background:-webkit-gradient(radial, 0% 0%, 0% 100%,from(#171b1c), to(#303636));/*谷歌*/
     background: -webkit-gradient(radial, 0% 0%, 0% 100%, from(#171b1c), to(#303636));      /* Safari 4-5, Chrome 1-9*/
