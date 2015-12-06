@@ -15,7 +15,7 @@ body{
 #head{
     width: 100%;
     height: 240px;
-    background: #151a1d;
+    background: #151a1d;/* url(block1.png)*/
     position: relative;
 }
 #main{
@@ -61,4 +61,10 @@ body{
     background: -webkit-gradient(radial, 0% 0%, 0% 100%, from(#171b1c), to(#303636));      /* Safari 4-5, Chrome 1-9*/
     background: -webkit-radial-gradient(right, #303636, #171b1c);   /*Safari5.1 Chrome 10+*/
     background: -o-radial-gradient(right, #303636, #171b1c);  /*Opera 11.10+*/
+}
+#alpha{
+    width: 100px;
+    height: 100px;
+    background-color: #ffccaa;
+    filter: Alpha(opacity=100,finishopacity=0,style=1,startx=0,starty=0,finishx=0,finishy=80);
 }
