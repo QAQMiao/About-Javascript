@@ -27,11 +27,23 @@ body{
     height: 280px;
     background: #1e2829;
 }
-.radius{
+.radiusB{
     -wekit-border-radius: 35px;
     -moz-border-radius: 35px;
     -o-border-radius: 35px;
     border-radius: 35px;
+}
+.radiusM{
+    -wekit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -o-border-radius: 20px;
+    border-radius: 20px;
+}
+.radiusS{
+    -wekit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
 }
 #box1,#box2{
     margin-top: 20px;
@@ -55,17 +67,27 @@ body{
     background: -webkit-radial-gradient(right, #303636, #171b1c);   /*Safari5.1 Chrome 10+*/
     background: -o-radial-gradient(right, #303636, #171b1c);  /*Opera 11.10+*/
 }
-#alpha{
-    width: 100px;
-    height: 100px;
-    background-color: #ffccaa;
-}
 #content{
     position: absolute;
-    background: yellow;
-    width: 956px;
+    width: 940px;
     top: 0;
     left: 0;
     right: 0;
     margin:0 auto;
+}
+#mainMenu{
+    height: 60px;
+}
+.mbt{
+    height: 60px;
+    width: 100px;
+    margin: 0;
+    border: 0;
+    background-color: transparent;
+    font: bold 14px arial,sans-serif;
+    color: #ca9b95;
+}
+.mbt:hover{
+    background: url(mbtHover.jpg) center;
+    color: #ffffff;
 }
