@@ -22,12 +22,13 @@
 	var a = window.open(…);
 	a.close(); // close the window
   	```
-  6.	
-  ```html
-      <h2 id = "cc">My Beautiful girl</h2>
-      js: var c = getElementById("cc");
-          c.innerHTML = “the text which we like”;
-```
+  6.	e.g.
+
+  	```html
+	<h2 id = "cc">My Beautiful girl</h2>
+	js: var c = getElementById("cc");
+	c.innerHTML = “the text which we like”;
+	```
 
 - **About JQuery**【学自锋利的jQuery】
 
