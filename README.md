@@ -125,18 +125,16 @@
   		- 通过```$("<p></p>")```来新建元素，其中参数完全遵循XHTML语法【XHTML大法好！】，其实就是和平时写html文件差不多啦，然后通过如下函数将该元素添加到相应的位置
   		
 		```html
-		var $test = $("<p id = "#ture" class = "wtf">喵喵最喜欢帅哥辣么么哒</p>")
-		<p>大家好 <p>	//把html和js写在一起了，明白就好，实在没想好怎么布局
+		var $test = $("<span id = "#ture" class = "wtf">喵喵最喜欢帅哥辣么么哒</span>")
+		<p>大家好<p>	//把html和js写在一起了，明白就好，实在没想好怎么布局
 		```
 
-	这块还没有实验。。决定明天实验一下再来继续写。。
 		|函数名|使用方法|结果|
 		|:---:|:---:|:---:|
-		|appendTo()|$($test).appendTo())|大家好 喵喵最喜欢.....|
-		|prepend()|$("p").prepend($test))|喵喵最...帅哥辣大家好 |
-		|after()|$("p").after($test))||
-		||||
-		||||
+		|appendTo()|$($test).appendTo("p")|大家好喵喵最喜欢.....|
+		|prependTo()|$($test).prependTo("p")|喵喵最...么么哒大家好 |
+		|insertAfter()|$($test).insertAfter("p")|大家好<br />喵..么么哒|
+		|insertBefore()|$($test).insertBefore("p")|喵...么么哒<br />大家好|
   	- 
   5.**第四章**
 
