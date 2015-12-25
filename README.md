@@ -125,7 +125,7 @@
   		- 通过```$("<p></p>")```来新建元素，其中参数完全遵循XHTML语法【XHTML大法好！】，其实就是和平时写html文件差不多啦，然后通过如下函数将该元素添加到相应的位置
   		
 		```html
-		var $test = $("<span id = "#ture" class = "wtf">喵喵最喜欢帅哥辣么么哒</span>")
+		var $test = $("<span id = "ture" class = "wtf">喵喵最喜欢帅哥辣么么哒</span>")
 		<p>大家好<p>	//把html和js写在一起了，明白就好，实在没想好怎么布局
 		```
 
