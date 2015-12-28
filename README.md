@@ -135,6 +135,11 @@
 		|prependTo()|$($test).prependTo("p")|喵喵最...么么哒大家好 |
 		|insertAfter()|$($test).insertAfter("p")|大家好<br />喵..么么哒|
 		|insertBefore()|$($test).insertBefore("p")|喵...么么哒<br />大家好|
+  	- 删除节点
+  		- 有empty(),remove()和detach()三种方法
+  		- 最好理解的就是empty()了，$(selector).empty();清空选中标签的中的内容，相当于格式化当前标签了
+  		  原结构：![github](./4.png)清空后：![github](./5.png)
+  		- 
   	- 
   5.**第四章**
 
