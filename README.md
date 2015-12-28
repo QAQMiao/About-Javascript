@@ -22,16 +22,17 @@
 	var a = window.open(…);
 	a.close(); // close the window
   	```
-  6.	
-  ```html
-      <h2 id = "cc">My Beautiful girl</h2>
-      js: var c = getElementById("cc");
-          c.innerHTML = “the text which we like”;
-```
+  6.	e.g.
+
+  	```html
+	<h2 id = "cc">My Beautiful girl</h2>
+	js: var c = getElementById("cc");
+	c.innerHTML = “the text which we like”;
+	```
 
 - **About JQuery**【学自锋利的jQuery】
 
-  1.**Rules**
+  1.**第一章 认识jQuery**
   	- $("#foo") is the same as jQuery("#foo")
   	- compare with DOM
 
@@ -61,7 +62,7 @@
   	- 先导入jQuery
   		- 直接用jQuery来工作就好了，不用"jQuery.onConflict()"来让出控制权&emsp;&emsp;&emsp;&emsp;&emsp;//*我的理解是后导入的框架覆盖了$的控制权，所以$的控制权本来就在人家身上，不用你让出来，你乖乖的用你自己的名字就好了，嗯【认真脸】*
   	
-  3.**About Selector**
+  3.**第二章 jQuery选择器**
 	
 	总的来说，给我感觉和css选择器规则相差不大，所以大致写一下加强记忆好了。至于优点，就是和之前js的getElementById相比更加简短了，还有就是容错率高了0.0。
 	- 基本选择器
@@ -82,13 +83,13 @@
 		- by the way,后两种，在jQuery中有更好的写法
 			- $(".one + div") == $(".one").next("div")
 			- $(".one ~ div") == $(".one").nextAll("div")&emsp;&emsp;&emsp;//*个人感觉后一种写法更加方便记忆*
-			- $(".one").sibling("div")&emsp;&emsp;&emsp;//*选择class为one的元素所有同辈的div元素，前面的也会被选上哦*
+			- $(".one").sibling("div")&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;//*选择class为one的元素所有同辈的div元素，前面的也会被选上哦*
 	- 过滤选择器
 		- 基本过滤选择器[啊啊啊，不想敲了。。明天再敲或者干脆找个图片贴上怎么样0.0，嗯，今天就这样吧]
 		- 不好意思。。弃坑了几天，刚刚分手情绪不够稳定，不过现在可以继续学习辣。虽然现在除了我没人看，但是觉得还是要解释一下的好呢。
 		- 再有就是觉得选择这里，又看了两遍，觉得这种东西，没必要花费时间整理，大概了解之后用的时候现查就好了[记忆残患者!]
 	- 不如说一下在练习的时候注意到的一些小细节
-		- 一直以为开始标签和结束标签之间没有东西就可以简写成"**<br />**"这种，然后在配置jquery时狠狠被自己坑了一下
+		- 一直以为开始标签和结束标签之间没有东西就可以简写成```<br />```这种，然后在配置jquery时狠狠被自己坑了一下
 			```
 			<script src = "jquery.min.js"></script>
 			```
@@ -98,5 +99,66 @@
 		```html
 		$("p:contains('我')").css("background","#bbccaa");	//选择内容包含“我”的p元素，改变其背景色
 		$("p:contains(我)").css("background","#bbccaa");	//发现参数的参数可以写单引号也可以不写，总觉得写上好一点，毕竟XHTML
-		$("p:eq(3)").css("background","#bbccaa");		//选择索引值为3的p元素，这时又不能写引号了，我理解是写了引号就会变成字符型，取的值就是3的ASCII码值了，达不到想要的效果了
-	- 
+		$("p:eq(3)").css("background","#bbccaa");		   //选择索引值为3的p元素，这时又不能写引号了，我理解是写了引号就会变成字符型，取的值就是3的ASCII码值了，达不到想要的效果了
+		```
+		- var $a = $(...);$a.length表示此时$a中得到的jquery对象个数
+		- 在使用jquery选择器时不要随意加空格，很可能造成语义错误。e.g. $("p:hidden")和$("p :hidden")，前者是过滤选择器而后者是子代选择器。notice！
+		- make a distinction between :find() and :filter()
+			- $("div").find("#cc")&nbsp;&nbsp;选择div子元素中id为cc的元素，等同于$("div #cc");
+			- $("div").filter("#cc")&nbsp;&nbsp;选择id为cc的div元素们
+		- 可以代替if else的.toggle()
+		
+		```html
+			$(button...).toggle(
+			function(){
+				//代码段a
+			}.function(){
+				//代码段b
+			}
+			)	//单击按钮会轮流执行代码a和代码b~懂什么叫轮流么！轮流！就是这么6！不懂我也不告诉你！【pia，打晕拖走】。。
+		```
+ 
+  4.**第三章 jQuery中的DOM操作**
+  	- 查找节点
+  		- 想要查找元素节点或者是属性节点，就是通过前一章学习的选择器+.text()获取相应元素的文本，或者是通过选择器+.attr("属性名")获取某元素相应属性的值。
+  	- 增加节点和插入节点
+  		- 通过```$("<p></p>")```来新建元素，其中参数完全遵循XHTML语法【XHTML大法好！】，其实就是和平时写html文件差不多啦，然后通过如下函数将该元素添加到相应的位置
+  		
+		```html
+		var $test = $("<span id = "ture" class = "wtf">喵喵最喜欢帅哥辣么么哒</span>")
+		<p>大家好<p>	//把html和js写在一起了，明白就好，实在没想好怎么布局
+		```
+
+		|函数名|使用方法|结果|
+		|:---:|:---:|:---:|
+		|appendTo()|$($test).appendTo("p")|大家好喵喵最喜欢.....|
+		|prependTo()|$($test).prependTo("p")|喵喵最...么么哒大家好 |
+		|insertAfter()|$($test).insertAfter("p")|大家好<br />喵..么么哒|
+		|insertBefore()|$($test).insertBefore("p")|喵...么么哒<br />大家好|
+  	- 
+  5.**第四章**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
