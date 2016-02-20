@@ -32,6 +32,20 @@ body{
     -o-border-radius: 35px;
     border-radius: 35px;
 }
+.mbt{
+    height: 60px;
+    width: 100px;
+    margin: 0;
+    border: 0;
+    background-color: transparent;
+    font-weight: bolder;
+    font-size: 14px;
+    color: #ca9b95;
+}
+.mbt:hover{
+    background: url(mbtHover.jpg) center no-repeat;
+    color: #ffffff;
+}
 .radiusM{
     -wekit-border-radius: 20px;
     -moz-border-radius: 20px;
@@ -76,20 +90,6 @@ body{
 }
 #mainMenu{
     height: 60px;
-}
-.mbt{
-    height: 60px;
-    width: 100px;
-    margin: 0;
-    border: 0;
-    background-color: transparent;
-    font-weight: bolder;
-    font-size: 14px;
-    color: #ca9b95;
-}
-.mbt:hover{
-    background: url(mbtHover.jpg) center no-repeat;
-    color: #ffffff;
 }
 #head{
     height: 240px;
@@ -142,4 +142,29 @@ body{
     border: 0;
     background-color: #546573;
     color: #ffffff;
+}
+#search {
+    width: 100px;
+    height: 26px;
+    background: -moz-radial-gradient(top,#87afc6,#5b9ec3);/*火狐*/
+    background: -webkit-gradient(radial, 0% 0%, 0% 100%,from(#87afc6), to(#5b9ec3));/*谷歌*/
+    background: -webkit-gradient(radial, 0% 0%, 0% 100%, from(#87afc6), to(#5b9ec3));      /* Safari 4-5, Chrome 1-9*/
+    background: -webkit-radial-gradient(top, #87afc6, #5b9ec3);   /*Safari5.1 Chrome 10+*/
+    background: -o-radial-gradient(top, #87afc6, #5b9ec3);  /*Opera 11.10+*/
+    border: 0;
+    margin-left: 5px;
+}
+#search:hover {
+    background: -moz-radial-gradient(top,#87afc6,#4388ae);/*火狐*/
+    background: -webkit-gradient(radial, 0% 0%, 0% 100%,from(#87afc6), to(#4388ae));/*谷歌*/
+    background: -webkit-gradient(radial, 0% 0%, 0% 100%, from(#87afc6), to(#4388ae));      /* Safari 4-5, Chrome 1-9*/
+    background: -webkit-radial-gradient(top, #87afc6, #4388ae);   /*Safari5.1 Chrome 10+*/
+    background: -o-radial-gradient(top, #87afc6, #4388ae);  /*Opera 11.10+*/
+}
+#search:active {
+    background: -moz-radial-gradient(top,#87afc6,#2a729a);/*火狐*/
+    background: -webkit-gradient(radial, 0% 0%, 0% 100%,from(#87afc6), to(#2a729a));/*谷歌*/
+    background: -webkit-gradient(radial, 0% 0%, 0% 100%, from(#87afc6), to(#2a729a));      /* Safari 4-5, Chrome 1-9*/
+    background: -webkit-radial-gradient(top, #87afc6, #2b7197);   /*Safari5.1 Chrome 10+*/
+    background: -o-radial-gradient(top, #87afc6, #2b7197);  /*Opera 11.10+*/
 }
